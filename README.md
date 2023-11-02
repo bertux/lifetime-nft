@@ -37,7 +37,7 @@ If you are using one of thirdweb's [default supported chains](https://portal.thi
 #### Example
 
 ```ts
-export const chainConst = "ethereum";
+export const chainConst = "mumbai";
 ```
 
 If you are using any other chain, you need to provide the chain object from the `@thirdweb-dev/chains` package to `ThirdwebProvider`'s `activeChain` prop as mentioned [here](https://portal.thirdweb.com/react/react.thirdwebprovider#activechain-recommended).
