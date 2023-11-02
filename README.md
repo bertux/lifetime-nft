@@ -32,6 +32,10 @@ Go to the [`parameters.ts`](/src/consts/parameters.ts) and update the following 
 1. `contractConst`: The smart contract address of your NFT drop.
 2. `chainConst`: The name of the chain that your smart contract is deployed to.
 
+Go to the [`.env.template`](/.env.template) and copy it as `.env` to fill the following value:
+
+3. `VITE_TEMPLATE_CLIENT_ID`: The API key you can get one for free at [ThirdWeb](https://thirdweb.com/create-api-key)
+
 If you are using one of thirdweb's [default supported chains](https://portal.thirdweb.com/react/react.thirdwebprovider#default-chains) You can use the chain name as string.
 
 #### Example
