@@ -10,6 +10,7 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
+    "@chainvine/sdk": "^1.5.26",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",
     "@radix-ui/react-toast": "^1.1.3",
