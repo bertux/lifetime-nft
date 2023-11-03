@@ -24,3 +24,6 @@ export const themeConst = "dark";
 export const relayerUrlConst = ""; // OpenZeppelin relayer URL
 export const biconomyApiKeyConst = ""; // Biconomy API key
 export const biconomyApiIdConst = ""; // Biconomy API ID
+
+// ChainVine configuration
+export const chainVineCampaignIdConst = "O2HpAta7Da"; // ChainVine Campaign ID

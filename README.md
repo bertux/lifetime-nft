@@ -66,7 +66,7 @@ If you want to go further, you can also update the styles in the respective comp
 
 ### 4. Add ChainVine Referral Support
 
-If you want to sponsor the referral for your user, you can update the `campaignId` in [`parameters.ts`](/src/consts/parameters.ts) to point to your campaign.
+If you want to sponsor the referral for your user, you can update the `chainVineCampaignIdConst` in [`parameters.ts`](/src/consts/parameters.ts) to point to your campaign.
 
 Learn more: [ChainVine API docs](https://docs.chainvine.xyz/developers/sdk/classes-and-functions/chainvineuser/joincampaign-campaignparams)
 
