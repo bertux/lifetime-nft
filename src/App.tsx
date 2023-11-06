@@ -13,6 +13,7 @@ import {
   useUnclaimedNFTSupply,
   Web3Button,
 } from "@thirdweb-dev/react";
+import { ChainvineClient } from '@chainvine/sdk';
 import { BigNumber, utils } from "ethers";
 import { useMemo, useState } from "react";
 import { HeadingImage } from "./components/HeadingImage";
@@ -24,6 +25,7 @@ import {
   contractConst,
   primaryColorConst,
   themeConst,
+  chainVineCampaignIdConst,
 } from "./consts/parameters";
 import { ContractWrapper } from "@thirdweb-dev/sdk/dist/declarations/src/evm/core/classes/contract-wrapper";
 
