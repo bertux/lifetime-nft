@@ -12,23 +12,23 @@ import {
   relayerUrlConst,
   clientIdConst,
 } from "./consts/parameters";
-// import {
-//   Arbitrum,
-//   Avalanche,
-//   Base,
-//   Binance,
-//   Ethereum,
-//   Polygon,
-//   Optimism,
-// } from "@thirdweb-dev/chains";
+import {
+  Arbitrum,
+  Avalanche,
+  Base,
+  Binance,
+  Ethereum,
+  Optimism,
+  Polygon,
+} from "@thirdweb-dev/chains";
 import {
   ArbitrumGoerli,
   AvalancheFuji,
   BaseGoerli,
   BinanceTestnet,
   Goerli,
-  Mumbai,
   OptimismGoerli,
+  Mumbai,
 } from "@thirdweb-dev/chains";
 
 const container = document.getElementById("root");
