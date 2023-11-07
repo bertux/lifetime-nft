@@ -12,7 +12,15 @@ import {
   relayerUrlConst,
   clientIdConst,
 } from "./consts/parameters";
-// import { Ethereum, Polygon } from "@thirdweb-dev/chains";
+// import {
+//   Arbitrum,
+//   Avalanche,
+//   Base,
+//   Binance,
+//   Ethereum,
+//   Polygon,
+//   Optimism,
+// } from "@thirdweb-dev/chains";
 import {
   ArbitrumGoerli,
   AvalancheFuji,
