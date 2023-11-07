@@ -8,26 +8,25 @@ import { getGasless } from "./utils/getGasless";
 import {
   biconomyApiIdConst,
   biconomyApiKeyConst,
-  chainConst,
   relayerUrlConst,
   clientIdConst,
 } from "./consts/parameters";
+// import {
+//   Arbitrum,
+//   Avalanche,
+//   Base,
+//   Binance,
+//   Ethereum,
+//   Optimism,
+//   Polygon,
+// } from "@thirdweb-dev/chains";
 import {
-  Arbitrum,
-  Avalanche,
-  Base,
-  Binance,
-  Ethereum,
-  Optimism,
-  Polygon,
-} from "@thirdweb-dev/chains";
-import {
-  ArbitrumGoerli,
-  AvalancheFuji,
-  BaseGoerli,
-  BinanceTestnet,
-  Goerli,
-  OptimismGoerli,
+  // ArbitrumGoerli,
+  // AvalancheFuji,
+  // BaseGoerli,
+  // BinanceTestnet,
+  // Goerli,
+  // OptimismGoerli,
   Mumbai,
 } from "@thirdweb-dev/chains";
 
@@ -42,26 +41,18 @@ const biconomyApiId =
   urlParams.get("biconomyApiId") || biconomyApiIdConst || "";
 const sdkOptions = getGasless(relayerUrl, biconomyApiKey, biconomyApiId);
 
-const chain =
-  urlParams.get("chain") && urlParams.get("chain")?.startsWith("{")
-    ? JSON.parse(String(urlParams.get("chain")))
-    : urlParams.get("chain") || chainConst;
+// const chain =
+//   urlParams.get("chain") && urlParams.get("chain")?.startsWith("{")
+//     ? JSON.parse(String(urlParams.get("chain")))
+//     : urlParams.get("chain") || chainConst;
 
 const clientId = urlParams.get("clientId") || clientIdConst || "";
 
 root.render(
   <React.StrictMode>
     <ThirdwebProvider
-      activeChain={chain}
-      supportedChains={[
-        ArbitrumGoerli,
-        AvalancheFuji,
-        BaseGoerli,
-        BinanceTestnet,
-        Goerli,
-        Mumbai,
-        OptimismGoerli,
-      ]}
+      activeChain={Mumbai}
+      supportedChains={[Mumbai]}
       sdkOptions={sdkOptions}
       clientId={clientId}
     >

@@ -2,18 +2,25 @@
 
 // Your smart contract address (available on the thirdweb dashboard)
 // For existing collections: import your existing contracts on the dashboard: https://thirdweb.com/dashboard
-export const contractArbitrumConst = "0xb3f5F57c1B06Cf171b6221149370aa9e66916Dc4";
-export const contractAvalancheConst = "0xa5563F87EAacf9F76500cE6639b8c733F1BBf859";
-export const contractBaseConst = "0x19B1C6Cf5c80B164AfAf5cCB09B22981DF5A6Ac1";
-export const contractBinanceConst = "0x1a635d1EE7e0F2d8B1B82510523d50781F2bd6D5";
-export const contractEthereumConst = "0x55153a49412a94aDc4Cee3AcFEBa64e2BB574C6c";
-export const contractOptimismConst = "0x863fF3CE4B67e4555B2366BdFBAF5F7E77741c34";
-export const contractPolygonConst = "0x960a99c28C165a6e97Fea9FD95b535D44Fa20359";
+// on Arbitrum
+// export const contractConst = "0xb3f5F57c1B06Cf171b6221149370aa9e66916Dc4";
+// on Avalanche
+// export const contractConst = "0xa5563F87EAacf9F76500cE6639b8c733F1BBf859";
+// on Base
+// export const contractConst = "0x19B1C6Cf5c80B164AfAf5cCB09B22981DF5A6Ac1";
+// on Binance
+// export const contractConst = "0x1a635d1EE7e0F2d8B1B82510523d50781F2bd6D5";
+// on Ethereum
+// export const contractConst = "0x55153a49412a94aDc4Cee3AcFEBa64e2BB574C6c";
+// on Optimism
+// export const contractConst = "0x863fF3CE4B67e4555B2366BdFBAF5F7E77741c34";
+// on Polygon
+export const contractConst = "0x960a99c28C165a6e97Fea9FD95b535D44Fa20359";
 
 // The name of the chain your contract is deployed to.
 // Refer to README.md on how to specify the chain name.
 // export const chainConst = "mumbai";
-export const chainConst = "optimism-goerli";
+// export const chainConst = "optimism-goerli";
 // export const chainConst = "optimism";
 
 // It is IMPORTANT to provide your own API key to use the thirdweb SDK and infrastructure.

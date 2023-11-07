@@ -28,16 +28,10 @@ import { useToast } from "./components/ui/use-toast";
 import { parseIneligibility } from "./utils/parseIneligibility";
 import {
   clientIdConst,
-  contractArbitrumConst,
-  contractAvalancheConst,
-  contractBaseConst,
-  contractBinanceConst,
-  contractEthereumConst,
-  contractOptimismConst,
-  contractPolygonConst,
   primaryColorConst,
   themeConst,
   chainVineCampaignIdConst,
+  contractConst,
 } from "./consts/parameters";
 import { ContractWrapper } from "@thirdweb-dev/sdk/dist/declarations/src/evm/core/classes/contract-wrapper";
 
@@ -62,38 +56,7 @@ export default function Home() {
   console.log("chain:", chain?.chainId);
   const status = useConnectionStatus();
   console.log("status:", status);
-  let contractAddress;
-  switch (chain?.chainId) {
-    case 42161:
-    case 421613:
-      contractAddress = contractArbitrumConst;
-      break;
-    case 43113:
-    case 43114:
-      contractAddress = contractAvalancheConst;
-      break;
-    case 8453:
-    case 84531:
-      contractAddress = contractBaseConst;
-      break;
-    case 56:
-    case 97:
-      contractAddress = contractBinanceConst;
-      break;
-    case 1:
-    case 5:
-      contractAddress = contractEthereumConst;
-      break;
-    case 137:
-    case 80001:
-      contractAddress = contractPolygonConst;
-      break;
-    case 10:
-    case 420:
-    default:
-      contractAddress = contractOptimismConst;
-      break;
-  }
+  const contractAddress = contractConst;
   console.log("contractAddress:", contractAddress);
   const contractQuery = useContract(contractAddress);
   const contractMetadata = useContractMetadata(contractQuery.contract);
