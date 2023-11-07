@@ -52,12 +52,12 @@ const colors = {
 } as const;
 
 export default function Home() {
-  const chain = useChain();
-  console.log("chain:", chain?.chainId);
-  const status = useConnectionStatus();
-  console.log("status:", status);
+  // const chain = useChain();
+  // console.log("chain:", chain?.chainId);
+  // const status = useConnectionStatus();
+  // console.log("status:", status);
   const contractAddress = contractConst;
-  console.log("contractAddress:", contractAddress);
+  // console.log("contractAddress:", contractAddress);
   const contractQuery = useContract(contractAddress);
   const contractMetadata = useContractMetadata(contractQuery.contract);
   const { toast } = useToast();
@@ -298,21 +298,6 @@ export default function Home() {
     ],
   );
 
-  const config = {
-    logToConsole: true, // Optional parameter for your debugging purposes
-    testMode: true, //This tells the SDK to point to our staging environment
-  };
-  const client = new ChainvineClient(config);
-  // const userClient = await client.syncUser(userWallet);
-  storeReferrerId();
-
-  const referrerId = getReferrerId();
-  if (referrerId) {
-    console.log("referrerId:", referrerId);
-    console.log("address:", address);
-    // await client.recordClick(referrerId, chainVineCampaignIdConst);
-  }
-
   const clientId = urlParams.get("clientId") || clientIdConst || "";
   if (!clientId) {
     return (
@@ -469,7 +454,32 @@ export default function Home() {
                         maxHeight: "43px",
                       }}
                       theme={theme}
-                      action={(cntr) => cntr.erc721.claim(quantity)}
+                      action={async (cntr) => {
+                        storeReferrerId();
+                        cntr.erc721.claim(quantity);
+                        const config = {
+                          logToConsole: true, // Optional parameter for your debugging purposes
+                          testMode: true, //This tells the SDK to point to our staging environment
+                        };
+                        const client = new ChainvineClient(config);
+                        const campaign = {
+                          id: chainVineCampaignIdConst,
+                        };
+                        const referrerId = getReferrerId();
+                        console.log("address:", address);
+                        console.log("referrerId:", referrerId);
+                        if (address && referrerId) {
+                          const userClient = await client.syncUser(address);
+                          await userClient
+                            .referral({
+                              campaign,
+                            })
+                            .linkToReferrer(referrerId);
+                        }
+                        if (referrerId) {
+                          await client.recordClick(referrerId, campaign.id);
+                        }
+                      }}
                       isDisabled={!canClaim || buttonLoading}
                       onError={(err) => {
                         console.error(err);
