@@ -13,7 +13,11 @@ import {
   useUnclaimedNFTSupply,
   Web3Button,
 } from "@thirdweb-dev/react";
-import { ChainvineClient } from '@chainvine/sdk';
+import {
+  ChainvineClient,
+  storeReferrerId,
+  getReferrerId,
+} from "@chainvine/sdk";
 import { BigNumber, utils } from "ethers";
 import { useMemo, useState } from "react";
 import { HeadingImage } from "./components/HeadingImage";
@@ -286,6 +290,20 @@ export default function Home() {
       claimConditions.data,
     ],
   );
+
+  const config = {
+    logToConsole: true, // Optional parameter for your debugging purposes
+    testMode: true, //This tells the SDK to point to our staging environment
+  };
+  const client = new ChainvineClient(config);
+  // const userClient = await client.syncUser(userWallet);
+  storeReferrerId();
+
+  const referrerId = getReferrerId();
+  if (referrerId) {
+    console.log("referrerId", referrerId);
+    // await client.recordClick(referrerId, campaign.id);
+  }
 
   const clientId = urlParams.get("clientId") || clientIdConst || "";
   if (!clientId) {
