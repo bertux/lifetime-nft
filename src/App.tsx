@@ -301,8 +301,9 @@ export default function Home() {
 
   const referrerId = getReferrerId();
   if (referrerId) {
-    console.log("referrerId", referrerId);
-    // await client.recordClick(referrerId, campaign.id);
+    console.log("referrerId:", referrerId);
+    console.log("address:", address);
+    // await client.recordClick(referrerId, chainVineCampaignIdConst);
   }
 
   const clientId = urlParams.get("clientId") || clientIdConst || "";
