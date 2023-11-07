@@ -50,9 +50,9 @@ If you are using any other chain, you need to provide the chain object from the 
 #### Example
 
 ```ts
-import { Sepolia } from '@thirdweb-dev/chains';
+import { ArtheraTestnet } from '@thirdweb-dev/chains';
 
-export const chainConst = Sepolia;
+export const chainConst = ArtheraTestnet;
 ```
 
 If your chain is not included in the `@thirdweb-dev/chains` package, you can provide the chain information yourself by creating an object as mentioned [here](https://portal.thirdweb.com/react/react.thirdwebprovider#custom-evm-chains)
