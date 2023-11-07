@@ -12,7 +12,8 @@ export const contractPolygonConst = "0x960a99c28C165a6e97Fea9FD95b535D44Fa20359"
 
 // The name of the chain your contract is deployed to.
 // Refer to README.md on how to specify the chain name.
-export const chainConst = "mumbai";
+// export const chainConst = "mumbai";
+export const chainConst = "optimism-goerli";
 // export const chainConst = "optimism";
 
 // It is IMPORTANT to provide your own API key to use the thirdweb SDK and infrastructure.
