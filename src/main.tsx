@@ -11,24 +11,24 @@ import {
   relayerUrlConst,
   clientIdConst,
 } from "./consts/parameters";
-// import {
-//   Arbitrum,
-//   Avalanche,
-//   Base,
-//   Binance,
-//   Ethereum,
-//   Optimism,
-//   Polygon,
-// } from "@thirdweb-dev/chains";
 import {
-  // ArbitrumGoerli,
-  // AvalancheFuji,
-  // BaseGoerli,
-  // BinanceTestnet,
-  // Goerli,
-  // OptimismGoerli,
-  Mumbai,
+  //   Arbitrum,
+  //   Avalanche,
+  //   Base,
+  Binance,
+  //   Ethereum,
+  //   Optimism,
+  //   Polygon,
 } from "@thirdweb-dev/chains";
+// import {
+// ArbitrumGoerli,
+// AvalancheFuji,
+// BaseGoerli,
+// BinanceTestnet,
+// Goerli,
+// OptimismGoerli,
+//   Mumbai,
+// } from "@thirdweb-dev/chains";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
@@ -51,8 +51,8 @@ const clientId = urlParams.get("clientId") || clientIdConst || "";
 root.render(
   <React.StrictMode>
     <ThirdwebProvider
-      activeChain={Mumbai}
-      supportedChains={[Mumbai]}
+      activeChain={Binance}
+      supportedChains={[Binance]}
       sdkOptions={sdkOptions}
       clientId={clientId}
     >
