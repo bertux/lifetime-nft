@@ -64,11 +64,11 @@ You can change the theme and primary color of the page by updating `primaryColor
 
 If you want to go further, you can also update the styles in the respective components by changing the [Tailwind](https://tailwindcss.com/) classes.
 
-### 4. Optional: Add Gasless Transaction Support
+### 4. Add ChainVine Referral Support
 
-If you want to sponsor the gas fees for your user, you can update the `relayerUrlConst` in [`parameters.ts`](/src/consts/parameters.ts) to point to your Open Zeppelin relayer or `biconomyApiKeyConst` and `biconomyApiIdConst` to use Biconomy.
+If you want to sponsor the referral for your user, you can update the `chainVineCampaignIdConst` in [`parameters.ts`](/src/consts/parameters.ts) to point to your campaign.
 
-Learn more: https://portal.thirdweb.com/glossary/gasless-transactions
+Learn more: [ChainVine API docs](https://docs.chainvine.xyz/developers/sdk/classes-and-functions/chainvineuser/joincampaign-campaignparams)
 
 ## Deploying Your Site
 
