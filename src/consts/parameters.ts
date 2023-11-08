@@ -9,13 +9,13 @@
 // on Base
 // export const contractConst = "0x19B1C6Cf5c80B164AfAf5cCB09B22981DF5A6Ac1";
 // on Binance
-// export const contractConst = "0x1a635d1EE7e0F2d8B1B82510523d50781F2bd6D5";
+export const contractConst = "0x6f27D86d8795Ea96c7f91b9B422cef359FAAD428";
 // on Ethereum
 // export const contractConst = "0x55153a49412a94aDc4Cee3AcFEBa64e2BB574C6c";
 // on Optimism
 // export const contractConst = "0x863fF3CE4B67e4555B2366BdFBAF5F7E77741c34";
 // on Polygon
-export const contractConst = "0x960a99c28C165a6e97Fea9FD95b535D44Fa20359";
+// export const contractConst = "0x960a99c28C165a6e97Fea9FD95b535D44Fa20359";
 
 // The name of the chain your contract is deployed to.
 // Refer to README.md on how to specify the chain name.
