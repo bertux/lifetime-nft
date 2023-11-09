@@ -356,7 +356,7 @@ export default function Home() {
                   </span>
                 </p>
               )}
-              <h1 className="line-clamp-1 text-2xl font-bold xs:text-3xl lg:text-4xl">
+              <h1 className="text-2xl font-bold xs:text-3xl lg:text-4xl">
                 {contractMetadata.isLoading ? (
                   <div
                     role="status"
