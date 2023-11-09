@@ -330,7 +330,7 @@ export default function Home() {
             <div className="mt-8 flex w-full xs:mb-8 xs:mt-0 lg:hidden">
               <HeadingImage
                 src={
-                  contractMetadata.data?.image || firstNft?.metadata.image || ""
+                  contractMetadata.data?.image || firstNft?.metadata.image || "https://bafybeidwma7yn2dcu3zxgay6sfqpa4p3mnxwukjgw6zqrrrzfj3fqdj3ty.ipfs.w3s.link/nft-video.mp4"
                 }
                 isLoading={isLoading}
               />
