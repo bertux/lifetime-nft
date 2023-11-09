@@ -321,7 +321,7 @@ export default function Home() {
       <div className="grid h-screen grid-cols-1 lg:grid-cols-12">
         <div className="hidden h-full w-full items-center justify-center lg:col-span-5 lg:flex lg:px-12">
           <HeadingImage
-            src={contractMetadata.data?.image || firstNft?.metadata.image || ""}
+            src={contractMetadata.data?.image || firstNft?.metadata.image || "./nft-video.mp4"}
             isLoading={isLoading}
           />
         </div>
