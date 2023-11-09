@@ -580,6 +580,8 @@ export default function Home() {
         <p>Join Arthera and embrace a future of seamless, secure, and cost-effective blockchain interactions.</p>
         <p>Important: After Arthera Mainnet Genisis Public Launch, you will be able to bridge your NFT minted on one of the blockchain listed previously to get your Lifetime Licence NFT available on Arthera Chain.</p>
         </div>
+        <PoweredBy />
+
     </div>
   );
 }
