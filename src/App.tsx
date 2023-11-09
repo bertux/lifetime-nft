@@ -532,9 +532,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="max-w-2xl mx-auto p-4 rounded-lg shadow-md">
-        <h4 className="line-clamp-1 text-2xl font-bold xs:text-3xl lg:text-4xl">Welcome to the Arthera Chain Club: </h4>
-        <h4 className="line-clamp-1 text-2xl font-bold xs:text-3xl lg:text-4xl">a ‘forget gas fees for life’ experience </h4>
+      <div className="max-w-5xl mx-auto p-4 rounded-lg shadow-md">
+        <h4 className=" text-2xl font-bold xs:text-3xl lg:text-4xl">Welcome to the Arthera Chain Club: a ‘forget gas fees for life’ experience </h4>
         <br />
         <p>Embark on a journey through the boundless world of blockchain with the Arthera Genesis Power User Lifetime Subscription.</p>
         <p>This isn't just a subscription, it's your golden ticket to unlocking the full potential of blockchain.</p>
@@ -561,10 +560,12 @@ export default function Home() {
         <p>Join the Arthera Club and awaken a new blockchain reality.</p>
         <br />
         <p><strong>Key Details:</strong></p>
-        <p>Limited edition Special pre-launch price of $33 (usual price $99)</p>
-        <p>Available on 7 blockchains Affiliate/Referral: Arbitrum One, Avalanche C-Chain, Base BNB Chain, Ethereum, Optimism, Polygon)</p>
+        <ul className="list-disc pl-6 mb-4"></ul>
+        <li>Limited edition Special pre-launch price of $33 (usual price $99)</li>
+        <li>Available on 7 blockchains Affiliate/Referral: Arbitrum One, Avalanche C-Chain, Base BNB Chain, Ethereum, Optimism, Polygon)</li>
         <br />
         <p><strong>Arthera EOA Subscriptions:</strong></p>
+        <br />
         <p>Say goodbye to gas fee (on Arthera Chain) worries with Arthera Genesis User Power Subscription.</p>
         <p>Enjoy 30 daily transactions across multiple token types for an incredible value.</p>
         <p>Currently, the starting point provides you enough gas fees on a monthly basis for whole life to: </p>
