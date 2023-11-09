@@ -533,19 +533,22 @@ export default function Home() {
         </div>
       </div>
       <div className="mx-auto max-w-5xl rounded-lg p-4 shadow-md">
-        <h4 className=" text-2xl font-bold xs:text-3xl lg:text-4xl">
-          Welcome to the Arthera Chain Club: a ‘forget gas fees for life’
-          experience{" "}
+        <h2 className=" text-2xl font-bold xs:text-3xl lg:text-4xl">
+          Unlock the Future with Arthera Genesis User Power Lifetime
+          Subscription
+        </h2>
+        <br />
+        <h4 className=" text-1xl xs:text-1xl lg:text-4xl">
+          Welcome to the Arthera Club: Where Blockchain Transforms
         </h4>
         <br />
         <p>
           Embark on a journey through the boundless world of blockchain with the
-          Arthera Genesis Power User Lifetime Subscription.
-        </p>
-        <p>
+          <strong>Arthera Genesis Power User Lifetime Subscription</strong>.
           This isn't just a subscription, it's your golden ticket to unlocking
           the full potential of blockchain.
         </p>
+        <br />
         <p>
           Welcome to Arthera Chain, where every interaction is enriched with
           value and innovation.
@@ -556,6 +559,7 @@ export default function Home() {
             Why Choose the Arthera Genesis Power User Lifetime Subscription?
           </strong>
         </p>
+        <br />
         <p>
           Dive into a vibrant community of blockchain enthusiasts, surrounded by
           brilliance, passion, and innovation. Experience easy access to
@@ -563,92 +567,100 @@ export default function Home() {
           to curated dApps that elevate your blockchain journey.
         </p>
         <br />
-        <p>Premium Benefits Tailored for You:</p>
+        <p>
+          <strong>Premium Benefits Tailored for You</strong>:
+        </p>
         <br />
         <ul className="mb-4 list-disc pl-6">
           <li>
-            Engage with Arthera blockchain freely, with up to 30 daily
-            transactions at no additional cost.
+            <strong>No More Gas Fees</strong>: Say goodbye to gas fee worries on
+            Arthera. Engage with the Arthera blockchain freely - a lifetime of
+            up to 30 daily transactions on Arthera at no additional cost.
           </li>
           <li>
-            Curated dApps Access: Enjoy exclusive access to premium dApps,
-            offering cutting-edge opportunities.{" "}
-            <strong>+100 dApps available from day 1</strong>
+            <strong>Curated dApps Access</strong>: Enjoy exclusive access to
+            premium dApps, offering cutting-edge opportunities.
           </li>
           <li>
-            Community Engagement: Connect, share, learn, and grow within a
-            welcoming community of fellow explorers.
+            <strong>Community Engagement</strong>: Connect, share, learn, and
+            grow within a welcoming community of explorers. Explore: Unleashing
+            unprecedented value over a lifetime.
           </li>
           <li>
-            Explore: Unleashing unprecedented value over a lifetime Subscription
-            Store
+            <strong>Subscription Store Benefits</strong>: Access discounts on
+            various subscriptions, adding value to your blockchain journey.
           </li>
           <li>
-            Benefits: Access discounts on various subscriptions, adding value to
-            your blockchain journey.
+            <strong>Early Access to Lifetime Deals</strong>: Stay ahead with
+            whitelisted early access to exclusive opportunities.
           </li>
           <li>
-            Early Access to Lifetime Deals: Stay ahead with whitelisted early
-            access to exclusive opportunities.
-          </li>
-          <li>
-            Helpdesk Support: Enjoy constant support, ensuring your journey is
-            always smooth and exceptional.
+            <strong>Helpdesk Support</strong>: Enjoy constant support, ensuring
+            your journey is always smooth and exceptional.
           </li>
         </ul>
-        <br />
-        <p>Don't Miss This Unparalleled Opportunity!</p>
+
         <p>
-          The Arthera Genesis Power User Lifetime Subscription is more than an
-          offer, it's your gateway to a transformative blockchain experience.
+          <i>Don't Miss This Unparalleled Opportunity!</i>
         </p>
-        <p>Join the Arthera Club and awaken a new blockchain reality.</p>
+        <br />
+        <p>
+          The <strong>Arthera Genesis Power User Lifetime Subscription</strong>{" "}
+          is more than an offer, it's your gateway to a transformative
+          blockchain experience.
+        </p>
+        <br />
+        <p>
+          Join the <strong>Arthera Club</strong> and awaken a new blockchain
+          reality.
+        </p>
         <br />
         <p>
           <strong>Key Details:</strong>
         </p>
-        <ul className="mb-4 list-disc pl-6"></ul>
-        <li>
-          Limited edition Special pre-launch price of $33 (usual price $99)
-        </li>
-        <li>
-          Available on 7 blockchains Affiliate/Referral: Arbitrum One, Avalanche
-          C-Chain, Base BNB Chain, Ethereum, Optimism, Polygon)
-        </li>
-        <br />
-        <p>
-          <strong>Arthera EOA Subscriptions:</strong>
-        </p>
-        <br />
-        <p>
-          Say goodbye to gas fee (on Arthera Chain) worries with Arthera Genesis
-          User Power Subscription.
-        </p>
-        <p>
-          Enjoy 30 daily transactions across multiple token types for an
-          incredible value.
-        </p>
-        <p>
-          Currently, the starting point provides you enough gas fees on a
-          monthly basis for whole life to:{" "}
-        </p>
+
         <br />
         <ul className="mb-4 list-disc pl-6">
-          <li>Make 30 AA transfers </li>
-          <li>Perform 30 ERC20 token transfers </li>
-          <li>Execute 30 ERC721 token transfers </li>
-          <li>Conduct 30 ERC1155 token transfers </li>
+          <li>Limited edition Lifetime Subscription NFT</li>
+          <li>Special pre-launch price of $33 (usual price $99)</li>
+          <li>
+            Available on 7 blockchains Affiliate/Referral: Arbitrum One,
+            Avalanche C-Chain, Base BNB Chain, Ethereum, Optimism, Polygon
+          </li>
+          <br />
+          <li>
+            Affiliate/Referral Program:
+            <ul className="mb-4 list-disc pl-6">
+              <li>10% referral bonus for up to 33 licenses</li>
+              <li>15% referral bonus for 34-66 licenses</li>
+              <li>20% referral bonus for 67+ licenses</li>
+            </ul>
+          </li>
+          <li>
+            Currently, the subscription provides you a daily allowance that lets
+            you:
+          </li>
+
+          <ul className="mb-4 list-disc pl-6">
+            <li>Make 30 $AA transfers</li>
+            <li>Make 30 ERC20 token transfers</li>
+            <li>Make 30 ERC721 token transfers</li>
+            <li>Make 30 ERC1155 token transfers</li>
+          </ul>
         </ul>
+
+        <p>
+          Make Arthera your destination, and embrace a future of seamless,
+          secure and cost-effective blockchain exploration.
+        </p>
         <br />
         <p>
-          Join Arthera and embrace a future of seamless, secure, and
-          cost-effective blockchain interactions.
-        </p>
-        <p>
-          Important: After Arthera Mainnet Genisis Public Launch, you will be
-          able to bridge your NFT minted on one of the blockchain listed
-          previously to get your Lifetime Licence NFT available on Arthera
-          Chain.
+          <i>
+            Important: After Arthera Mainnet Genisis Public Launch, you will be
+            able to bridge your NFT minted on one of the blockchain listed
+            previously to get your Lifetime Licence NFT available on Arthera
+            Chain.
+          </i>
         </p>
       </div>
       <PoweredBy />
