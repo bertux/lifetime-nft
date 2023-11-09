@@ -9,7 +9,7 @@
 // on Base
 // export const contractConst = "0x19B1C6Cf5c80B164AfAf5cCB09B22981DF5A6Ac1";
 // on Binance
-export const contractConst = "0x6f27D86d8795Ea96c7f91b9B422cef359FAAD428";
+export const contractConst = "0xdB1474Ba3A6451b9f79De4476456240Db323B9EF";
 // on Ethereum
 // export const contractConst = "0x55153a49412a94aDc4Cee3AcFEBa64e2BB574C6c";
 // on Optimism
