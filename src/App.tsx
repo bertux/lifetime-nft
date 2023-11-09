@@ -468,17 +468,17 @@ export default function Home() {
                         const referrerId = getReferrerId();
                         console.log("address:", address);
                         console.log("referrerId:", referrerId);
-                        if (address && referrerId) {
-                          const userClient = await client.syncUser(address);
-                          await userClient
-                            .referral({
-                              campaign,
-                            })
-                            .linkToReferrer(referrerId);
-                        }
-                        if (referrerId) {
-                          await client.recordClick(referrerId, campaign.id);
-                        }
+                        // if (address && referrerId) {
+                        //   const userClient = await client.syncUser(address);
+                        //   await userClient
+                        //     .referral({
+                        //       campaign,
+                        //     })
+                        //     .linkToReferrer(referrerId);
+                        // }
+                        // if (referrerId) {
+                        //   await client.recordClick(referrerId, campaign.id);
+                        // }
                       }}
                       isDisabled={!canClaim || buttonLoading}
                       onError={(err) => {
