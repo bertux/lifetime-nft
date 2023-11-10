@@ -30,7 +30,6 @@ Be sure to configure a **name**, **description**, and **image** for your NFT dro
 Go to the [`parameters.ts`](/src/consts/parameters.ts) and update the following values:
 
 1. `contractConst`: The smart contract address of your NFT drop.
-2. `chainConst`: The name of the chain that your smart contract is deployed to.
 
 Go to the [`.env.template`](/.env.template) and copy it as `.env` to fill the following value:
 
