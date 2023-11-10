@@ -14,7 +14,7 @@ import {
 import {
   //   Arbitrum,
   //   Avalanche,
-  //   Base,
+  Base,
   Binance,
   Ethereum,
   Optimism,
@@ -29,7 +29,8 @@ export type AppChainId =
   | (typeof Polygon)["chainId"]
   | (typeof Binance)["chainId"]
   | (typeof Ethereum)["chainId"]
-  | (typeof Optimism)["chainId"];
+  | (typeof Optimism)["chainId"]
+  | (typeof Base)["chainId"]
 
 const relayerUrl = urlParams.get("relayUrl") || relayerUrlConst || "";
 const biconomyApiKey =
@@ -47,7 +48,7 @@ function AppWithProviders() {
     <ThirdwebProvider
       clientId={clientId}
       activeChain={appChainId}
-      supportedChains={[Binance, Polygon, Ethereum, Optimism]}
+      supportedChains={[Binance, Polygon, Ethereum, Optimism, Base]}
     >
       <Toaster />
 

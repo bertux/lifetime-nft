@@ -35,7 +35,7 @@ import {
   contractConst,
 } from "./consts/parameters";
 import { ContractWrapper } from "@thirdweb-dev/sdk/dist/declarations/src/evm/core/classes/contract-wrapper";
-import { Polygon, Binance, Ethereum, Optimism } from "@thirdweb-dev/chains";
+import { Polygon, Binance, Ethereum, Optimism, Base } from "@thirdweb-dev/chains";
 import { AppChainId } from "./main";
 
 const urlParams = new URL(window.location.toString()).searchParams;
@@ -58,6 +58,7 @@ const binanceContract = "0xdB1474Ba3A6451b9f79De4476456240Db323B9EF";
 const polygonContract = "0x85C8453B6DD2d2A0c6c7937E8E115b4863c3e945";
 const ethereumContract = "0xF860869f089e3cd7E21045dd2a5056F764021c20";
 const optimismContract = "0x83bD77da3D5a69a91d6DA68A02319E590db28977";
+const baseContract = "0xD374DD8EA2BC8Be8bf0011c98BC3Bf286E0A972e";
 
 export default function Home(props: {
   setAppChainId: (chainId: AppChainId) => void;
@@ -90,13 +91,15 @@ export default function Home(props: {
     console.log("polygonContract:", polygonContract);
     console.log("ethereumContract:", ethereumContract);
     console.log("optimismContract:", optimismContract);
+    console.log("baseContract:", baseContract);
     if (chain !== undefined) {
       if (chainId && chainId !== appChainId) {
         if (
           chainId === Polygon.chainId ||
           chainId === Binance.chainId ||
           chainId === Ethereum.chainId ||
-          chainId === Optimism.chainId
+          chainId === Optimism.chainId ||
+          chainId === Base.chainId
         ) {
           props.setAppChainId(chainId);
 
@@ -111,6 +114,9 @@ export default function Home(props: {
           }
           if (chainId === Optimism.chainId) {
             setContractAddress(optimismContract);
+          }
+          if (chainId === Base.chainId) {
+            setContractAddress(baseContract);
           }
         }
       }
