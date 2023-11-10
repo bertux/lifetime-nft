@@ -18,16 +18,7 @@ import {
   Binance,
   //   Ethereum,
   //   Optimism,
-  //   Polygon,
-} from "@thirdweb-dev/chains";
-import {
-// ArbitrumGoerli,
-// AvalancheFuji,
-// BaseGoerli,
-// BinanceTestnet,
-Goerli,
-// OptimismGoerli,
-  Mumbai,
+  Polygon,
 } from "@thirdweb-dev/chains";
 
 const container = document.getElementById("root");
@@ -35,9 +26,8 @@ const root = createRoot(container!);
 const urlParams = new URL(window.location.toString()).searchParams;
 
 export type AppChainId =
-  | (typeof Mumbai)["chainId"]
-  | (typeof Binance)["chainId"]
-  | (typeof Goerli)["chainId"];
+  | (typeof Polygon)["chainId"]
+  | (typeof Binance)["chainId"];
 
 const relayerUrl = urlParams.get("relayUrl") || relayerUrlConst || "";
 const biconomyApiKey =
@@ -55,8 +45,7 @@ function AppWithProviders() {
     <ThirdwebProvider
       clientId={clientId}
       activeChain={appChainId}
-      // activeChain={Binance}
-      supportedChains={[Binance, Goerli, Mumbai]}
+      supportedChains={[Binance, Polygon]}
     >
       <Toaster />
 
