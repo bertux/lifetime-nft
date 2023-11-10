@@ -35,7 +35,7 @@ import {
   contractConst,
 } from "./consts/parameters";
 import { ContractWrapper } from "@thirdweb-dev/sdk/dist/declarations/src/evm/core/classes/contract-wrapper";
-import { Polygon, Goerli, Binance } from "@thirdweb-dev/chains";
+import { Polygon, Binance } from "@thirdweb-dev/chains";
 import { AppChainId } from "./main";
 
 const urlParams = new URL(window.location.toString()).searchParams;
@@ -90,7 +90,6 @@ export default function Home(props: {
       if (chainId && chainId !== appChainId) {
         if (
           chainId === Polygon.chainId ||
-          chainId === Goerli.chainId ||
           chainId === Binance.chainId
         ) {
           props.setAppChainId(chainId);
