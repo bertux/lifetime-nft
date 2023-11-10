@@ -35,7 +35,15 @@ import {
   contractConst,
 } from "./consts/parameters";
 import { ContractWrapper } from "@thirdweb-dev/sdk/dist/declarations/src/evm/core/classes/contract-wrapper";
-import { Polygon, Binance } from "@thirdweb-dev/chains";
+import {
+  Polygon,
+  Binance,
+  Ethereum,
+  Optimism,
+  Base,
+  Arbitrum,
+  Avalanche,
+} from "@thirdweb-dev/chains";
 import { AppChainId } from "./main";
 
 const urlParams = new URL(window.location.toString()).searchParams;
@@ -56,6 +64,11 @@ const colors = {
 
 const binanceContract = "0xdB1474Ba3A6451b9f79De4476456240Db323B9EF";
 const polygonContract = "0x85C8453B6DD2d2A0c6c7937E8E115b4863c3e945";
+const ethereumContract = "0xF860869f089e3cd7E21045dd2a5056F764021c20";
+const optimismContract = "0x83bD77da3D5a69a91d6DA68A02319E590db28977";
+const baseContract = "0xD374DD8EA2BC8Be8bf0011c98BC3Bf286E0A972e";
+const arbitrumContract = "0xbDA8785fb802856C0e3055C090ED6D358DCCC4C1";
+const avalancheContract = "0x051ba1B0f1357ad35cA524EA1390BEC2a4Ea41e0";
 
 export default function Home(props: {
   setAppChainId: (chainId: AppChainId) => void;
@@ -86,11 +99,22 @@ export default function Home(props: {
     console.log("current contractAddress:", contractAddress);
     console.log("binanceContract:", binanceContract);
     console.log("polygonContract:", polygonContract);
+    console.log("ethereumContract:", ethereumContract);
+    console.log("optimismContract:", optimismContract);
+    console.log("baseContract:", baseContract);
+    console.log("arbitrumContract:", arbitrumContract);
+    console.log("avalancheContract:", avalancheContract);
+
     if (chain !== undefined) {
       if (chainId && chainId !== appChainId) {
         if (
           chainId === Polygon.chainId ||
-          chainId === Binance.chainId
+          chainId === Binance.chainId ||
+          chainId === Ethereum.chainId ||
+          chainId === Optimism.chainId ||
+          chainId === Base.chainId ||
+          chainId === Arbitrum.chainId ||
+          chainId === Avalanche.chainId
         ) {
           props.setAppChainId(chainId);
 
@@ -99,6 +123,21 @@ export default function Home(props: {
           }
           if (chainId === Polygon.chainId) {
             setContractAddress(polygonContract);
+          }
+          if (chainId === Ethereum.chainId) {
+            setContractAddress(ethereumContract);
+          }
+          if (chainId === Optimism.chainId) {
+            setContractAddress(optimismContract);
+          }
+          if (chainId === Base.chainId) {
+            setContractAddress(baseContract);
+          }
+          if (chainId === Arbitrum.chainId) {
+            setContractAddress(arbitrumContract);
+          }
+          if (chainId === Avalanche.chainId) {
+            setContractAddress(avalancheContract);
           }
         }
       }
