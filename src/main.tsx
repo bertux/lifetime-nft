@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
@@ -20,19 +20,24 @@ import {
   //   Optimism,
   //   Polygon,
 } from "@thirdweb-dev/chains";
-// import {
+import {
 // ArbitrumGoerli,
 // AvalancheFuji,
 // BaseGoerli,
 // BinanceTestnet,
-// Goerli,
+Goerli,
 // OptimismGoerli,
-//   Mumbai,
-// } from "@thirdweb-dev/chains";
+  Mumbai,
+} from "@thirdweb-dev/chains";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
 const urlParams = new URL(window.location.toString()).searchParams;
+
+export type AppChainId =
+  | (typeof Mumbai)["chainId"]
+  | (typeof Binance)["chainId"]
+  | (typeof Goerli)["chainId"];
 
 const relayerUrl = urlParams.get("relayUrl") || relayerUrlConst || "";
 const biconomyApiKey =
@@ -41,23 +46,27 @@ const biconomyApiId =
   urlParams.get("biconomyApiId") || biconomyApiIdConst || "";
 const sdkOptions = getGasless(relayerUrl, biconomyApiKey, biconomyApiId);
 
-// const chain =
-//   urlParams.get("chain") && urlParams.get("chain")?.startsWith("{")
-//     ? JSON.parse(String(urlParams.get("chain")))
-//     : urlParams.get("chain") || chainConst;
-
 const clientId = urlParams.get("clientId") || clientIdConst || "";
+
+function AppWithProviders() {
+  const [appChainId, setAppChainId] = useState<AppChainId>(Binance.chainId);
+
+  return (
+    <ThirdwebProvider
+      clientId={clientId}
+      activeChain={appChainId}
+      // activeChain={Binance}
+      supportedChains={[Binance, Goerli, Mumbai]}
+    >
+      <Toaster />
+
+      <App appChainId={appChainId} setAppChainId={setAppChainId} />
+    </ThirdwebProvider>
+  );
+}
 
 root.render(
   <React.StrictMode>
-    <ThirdwebProvider
-      activeChain={Binance}
-      supportedChains={[Binance]}
-      sdkOptions={sdkOptions}
-      clientId={clientId}
-    >
-      <Toaster />
-      <App />
-    </ThirdwebProvider>
+    <AppWithProviders />
   </React.StrictMode>,
 );

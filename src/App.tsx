@@ -14,6 +14,7 @@ import {
   useNFT,
   useUnclaimedNFTSupply,
   Web3Button,
+  useChainId,
 } from "@thirdweb-dev/react";
 import {
   ChainvineClient,
@@ -21,7 +22,7 @@ import {
   getReferrerId,
 } from "@chainvine/sdk";
 import { BigNumber, utils } from "ethers";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { HeadingImage } from "./components/HeadingImage";
 import { PoweredBy } from "./components/PoweredBy";
 import { useToast } from "./components/ui/use-toast";
@@ -34,6 +35,8 @@ import {
   contractConst,
 } from "./consts/parameters";
 import { ContractWrapper } from "@thirdweb-dev/sdk/dist/declarations/src/evm/core/classes/contract-wrapper";
+import { Mumbai, Goerli, Binance } from "@thirdweb-dev/chains";
+import { AppChainId } from "./main";
 
 const urlParams = new URL(window.location.toString()).searchParams;
 const primaryColor =
@@ -51,13 +54,22 @@ const colors = {
   yellow: "#FBBF24",
 } as const;
 
-export default function Home() {
-  // const chain = useChain();
-  // console.log("chain:", chain?.chainId);
-  // const status = useConnectionStatus();
-  // console.log("status:", status);
-  const contractAddress = contractConst;
-  // console.log("contractAddress:", contractAddress);
+const binanceContract = "0xdB1474Ba3A6451b9f79De4476456240Db323B9EF";
+const mumbaiContract = "0x88f54479F9DB46c2d97823D01CC316aa88B54a33";
+const goerliContract = "0x242674c150A59B9297c725be75732B29dEA25a2f";
+
+export default function Home(props: {
+  setAppChainId: (chainId: AppChainId) => void;
+  appChainId: AppChainId;
+}) {
+  const chainId = useChainId();
+  const { appChainId } = props;
+  const chain = useChain();
+  console.log("chain:", chain?.chainId);
+  const status = useConnectionStatus();
+  console.log("status:", status);
+
+  const [contractAddress, setContractAddress] = useState(binanceContract);
   const contractQuery = useContract(contractAddress);
   const contractMetadata = useContractMetadata(contractQuery.contract);
   const { toast } = useToast();
@@ -70,6 +82,36 @@ export default function Home() {
       ? "dark"
       : "light";
   }
+
+  useEffect(() => {
+    console.log("current contractAddress:", contractAddress);
+    console.log("binanceContract:", binanceContract);
+    console.log("goerliContract:", goerliContract);
+    console.log("mumbaiContract:", mumbaiContract);
+    if (chain !== undefined) {
+      if (chainId && chainId !== appChainId) {
+        if (
+          chainId === Mumbai.chainId ||
+          chainId === Goerli.chainId ||
+          chainId === Binance.chainId
+        ) {
+
+          props.setAppChainId(chainId);
+
+          if (chainId === Binance.chainId) {
+            setContractAddress(binanceContract);
+          }
+          if (chainId === Mumbai.chainId) {
+            setContractAddress(mumbaiContract);
+          }
+          if (chainId === Goerli.chainId) {
+            setContractAddress(goerliContract);
+          }
+        }
+      }
+    }
+  }, [chainId, appChainId, chain]);
+
   const root = window.document.documentElement;
   root.classList.add(theme);
   const address = useAddress();
