@@ -631,9 +631,7 @@ export default function Home() {
           <li>
             Affiliate/Referral Program:
             <ul className="mb-4 list-disc pl-6">
-              <li>10% referral bonus for up to 33 licenses</li>
-              <li>15% referral bonus for 34-66 licenses</li>
-              <li>20% referral bonus for 67+ licenses</li>
+              <li>15% referral bonus</li>
             </ul>
           </li>
           <li>
