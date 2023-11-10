@@ -17,7 +17,7 @@ import {
   //   Base,
   Binance,
   Ethereum,
-  //   Optimism,
+  Optimism,
   Polygon,
 } from "@thirdweb-dev/chains";
 
@@ -28,7 +28,8 @@ const urlParams = new URL(window.location.toString()).searchParams;
 export type AppChainId =
   | (typeof Polygon)["chainId"]
   | (typeof Binance)["chainId"]
-  | (typeof Ethereum)["chainId"];
+  | (typeof Ethereum)["chainId"]
+  | (typeof Optimism)["chainId"];
 
 const relayerUrl = urlParams.get("relayUrl") || relayerUrlConst || "";
 const biconomyApiKey =
@@ -46,7 +47,7 @@ function AppWithProviders() {
     <ThirdwebProvider
       clientId={clientId}
       activeChain={appChainId}
-      supportedChains={[Binance, Polygon, Ethereum]}
+      supportedChains={[Binance, Polygon, Ethereum, Optimism]}
     >
       <Toaster />
 
