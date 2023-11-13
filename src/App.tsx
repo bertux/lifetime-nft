@@ -52,11 +52,11 @@ const primaryColor =
 
 const colors = {
   purple: "#7C3AED",
-  blue: "#3B82F6",
+  blue: "#1dc0cc",
   orange: "#F59E0B",
   pink: "#EC4899",
   green: "#10B981",
-  red: "#EF4444",
+  red: "#e20000",
   teal: "#14B8A6",
   cyan: "#22D3EE",
   yellow: "#FBBF24",
@@ -447,7 +447,7 @@ export default function Home(props: {
               </h1>
               {contractMetadata.data?.description ||
               contractMetadata.isLoading ? (
-                <div className="line-clamp-4 text-gray-500">
+                <div className="line-clamp-4 text-white-500">
                   {contractMetadata.isLoading ? (
                     <div
                       role="status"
