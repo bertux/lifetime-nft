@@ -142,7 +142,7 @@ export default function Home(props: {
         }
       }
     }
-  }, [chainId, appChainId, chain]);
+  }, [chain]);
 
   const root = window.document.documentElement;
   root.classList.add(theme);
