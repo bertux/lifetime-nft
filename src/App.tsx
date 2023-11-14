@@ -45,8 +45,8 @@ import {
   Avalanche,
 } from "@thirdweb-dev/chains";
 import { AppChainId } from "./main";
-import { XMarkIcon } from '@heroicons/react/20/solid'
-import FooterButtonsDarkExample from './components/ui/footer'
+import { XMarkIcon } from "@heroicons/react/20/solid";
+import FooterButtonsDarkExample from "./components/ui/footer";
 
 const urlParams = new URL(window.location.toString()).searchParams;
 const primaryColor =
@@ -393,61 +393,63 @@ export default function Home(props: {
 
   return (
     <div className="min-h-screen w-screen">
-    
-
-    <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-red-600 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
-      <div
-        className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
-        aria-hidden="true"
-      >
+      <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-red-600 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
         <div
-          className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
-          style={{
-            clipPath:
-              'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)',
-          }}
-        />
-      </div>
-      <div
-        className="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
-        aria-hidden="true"
-      >
+          className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+          aria-hidden="true"
+        >
+          <div
+            className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+            style={{
+              clipPath:
+                "polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)",
+            }}
+          />
+        </div>
         <div
-          className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
-          style={{
-            clipPath:
-              'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)',
-          }}
-        />
-      </div>
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <p className="text-sm leading-6 text-gray-900">
-          {/* <strong className="font-semibold">GeneriCon 2023</strong> */}
-          {/* <svg viewBox="0 0 2 2" className="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
+          className="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+          aria-hidden="true"
+        >
+          <div
+            className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+            style={{
+              clipPath:
+                "polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)",
+            }}
+          />
+        </div>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <p className="text-sm leading-6 text-gray-900">
+            {/* <strong className="font-semibold">GeneriCon 2023</strong> */}
+            {/* <svg viewBox="0 0 2 2" className="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
             <circle cx={1} cy={1} r={1} />
           </svg> */}
-          <strong className="font-semibold">Spread the word and get 15%!</strong>
-        </p>
-        <a
-          target="blank"
-          href="https://app.chainvine.xyz/arthera/O2HpAta7Da"
-          className="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
-        >
-          Get my referral link <span aria-hidden="true">&rarr;</span>
-        </a>
+            <strong className="font-semibold">
+              Spread the word and get 15%!
+            </strong>
+          </p>
+          <a
+            target="blank"
+            href="https://app.chainvine.xyz/arthera/O2HpAta7Da"
+            className="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+          >
+            Get my referral link <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+        <div className="flex flex-1 justify-end">
+          <button
+            type="button"
+            className="-m-3 p-3 focus-visible:outline-offset-[-4px]"
+          >
+            <span className="sr-only">Dismiss</span>
+            <XMarkIcon className="h-5 w-5 text-gray-900" aria-hidden="true" />
+          </button>
+        </div>
       </div>
-      <div className="flex flex-1 justify-end">
-        <button type="button" className="-m-3 p-3 focus-visible:outline-offset-[-4px]">
-          <span className="sr-only">Dismiss</span>
-          <XMarkIcon className="h-5 w-5 text-gray-900" aria-hidden="true" />
-        </button>
-      </div>
-    </div>
 
       <ConnectWallet className="!absolute !right-4 !top-4" theme={theme} />
       <div className="grid h-screen grid-cols-1 lg:grid-cols-12">
         <div className="hidden h-full w-full items-center justify-center lg:col-span-5 lg:flex lg:px-12">
-          
           <HeadingImage
             src={contractMetadata.data?.image || firstNft?.metadata.image || ""}
             isLoading={isLoading}
@@ -501,7 +503,7 @@ export default function Home(props: {
               </h1>
               {contractMetadata.data?.description ||
               contractMetadata.isLoading ? (
-                <div className="line-clamp-4 text-white-500">
+                <div className="text-white-500 line-clamp-4">
                   {contractMetadata.isLoading ? (
                     <div
                       role="status"
