@@ -395,7 +395,7 @@ export default function Home(props: {
     <div className="min-h-screen w-screen">
     
 
-    <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+    <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-red-600 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
       <div
         className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
         aria-hidden="true"
@@ -426,9 +426,10 @@ export default function Home(props: {
           {/* <svg viewBox="0 0 2 2" className="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
             <circle cx={1} cy={1} r={1} />
           </svg> */}
-          Spread the word and get 15%! 
+          <strong className="font-semibold">Spread the word and get 15%!</strong>
         </p>
         <a
+          target="blank"
           href="https://app.chainvine.xyz/arthera/O2HpAta7Da"
           className="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
         >
@@ -442,12 +443,6 @@ export default function Home(props: {
         </button>
       </div>
     </div>
-
-
-
-
-
-
 
       <ConnectWallet className="!absolute !right-4 !top-4" theme={theme} />
       <div className="grid h-screen grid-cols-1 lg:grid-cols-12">
