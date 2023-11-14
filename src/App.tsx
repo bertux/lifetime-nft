@@ -24,7 +24,6 @@ import {
 import { BigNumber, utils } from "ethers";
 import { useMemo, useState, useEffect } from "react";
 import { HeadingImage } from "./components/HeadingImage";
-import { PoweredBy } from "./components/PoweredBy";
 import { useToast } from "./components/ui/use-toast";
 import { parseIneligibility } from "./utils/parseIneligibility";
 import {
@@ -399,7 +398,7 @@ export default function Home(props: {
   return (
     <div className="min-h-screen w-screen">
       {removeBanner === false && (
-        <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-red-600 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+        <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
           <div
             className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
             aria-hidden="true"
@@ -670,12 +669,12 @@ export default function Home(props: {
         </div>
       </div>
       <div className="mx-auto max-w-5xl rounded-lg p-4 ">
-        <h2 className="text-white mt-20 text-3xl font-bold xs:text-3xl lg:text-4xl">
+        <h2 className="mt-20 text-3xl font-bold text-white xs:text-3xl lg:text-4xl">
           Unlock the Future with an Arthera Genesis Power User Lifetime
           Subscription NFT
         </h2>
         <br />
-        <h4 className="text-white xs:text-1xl text-base lg:text-2xl">
+        <h4 className="xs:text-1xl text-base text-white lg:text-2xl">
           Arthera is a Layer 1 EVM-compatible blockchain, improved by DAG-based
           technology. Testnet is live and{" "}
           <strong>Mainnet launches on December 25th 2023</strong>.
@@ -713,7 +712,9 @@ export default function Home(props: {
         </p>
         <br />
         <ul className="mb-4 list-disc pl-6">
-          <li className="text-white">Select your network and click on mint LTS NFT.</li>
+          <li className="text-white">
+            Select your network and click on mint LTS NFT.
+          </li>
           <li className="text-white">
             Spread the word with your{" "}
             <a
@@ -767,40 +768,54 @@ export default function Home(props: {
                 </p>
               </div>
               <div>
-                <p className="text-2xl text-white dark:text-white mb-5">
-                  Affiliate/Referral Program: </p>
-                  <ul className="mb-4 list-disc pl-6">
-                    <li className="text-white">15% referral bonus per LTS NFT</li>
-                    <li className="text-white">30% for 11 referrals or more</li>
-                  </ul>
+                <p className="mb-5 text-2xl text-white dark:text-white">
+                  Affiliate/Referral Program:{" "}
+                </p>
+                <ul className="mb-4 list-disc pl-6">
+                  <li className="text-white">15% referral bonus per LTS NFT</li>
+                  <li className="text-white">30% for 11 referrals or more</li>
+                </ul>
               </div>
 
               <div>
-                <p className="text-2xl text-white dark:text-white mb-5">
-                The subscription currently lets you: </p>
-                  <ul className="mb-4 list-disc pl-6">
-                    <li className="text-white">Make 30 $AA transfers, or</li>
-                    <li className="text-white">Make 30 ERC20 token transfers, or</li>
-                    <li className="text-white">Make 30 ERC721 token transfers, or</li>
-                    <li className="text-white">Make 30 ERC1155 token transfers</li>
-                  </ul>
+                <p className="mb-5 text-2xl text-white dark:text-white">
+                  The subscription currently lets you:{" "}
+                </p>
+                <ul className="mb-4 list-disc pl-6">
+                  <li className="text-white">Make 30 $AA transfers, or</li>
+                  <li className="text-white">
+                    Make 30 ERC20 token transfers, or
+                  </li>
+                  <li className="text-white">
+                    Make 30 ERC721 token transfers, or
+                  </li>
+                  <li className="text-white">
+                    Make 30 ERC1155 token transfers
+                  </li>
+                </ul>
               </div>
 
               <div>
                 <p className="text-2xl text-white dark:text-white">
-                Available on 7 blockchains: Arbitrum One, Avalanche C-Chain, Base BNB Chain, Ethereum, Optimism, Polygon
+                  Available on 7 blockchains: Arbitrum One, Avalanche C-Chain,
+                  Base BNB Chain, Ethereum, Optimism, Polygon
                 </p>
               </div>
-
             </div>
           </div>
         </section>
-        <p className="text-white"><i>Important: After the Arthera Mainnet Genesis Public Launch, you will be able to bridge your NFT to Arthera to get your Lifetime License, allowing for 30 daily transactions on Arthera only.</i></p>
+        <p className="text-white">
+          <i>
+            Important: After the Arthera Mainnet Genesis Public Launch, you will
+            be able to bridge your NFT to Arthera to get your Lifetime License,
+            allowing for 30 daily transactions on Arthera only.
+          </i>
+        </p>
 
         <br />
         <br />
       </div>
-      <PoweredBy />
+
       <FooterButtonsDarkExample />
     </div>
   );
