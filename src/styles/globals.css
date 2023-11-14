@@ -15,6 +15,7 @@
   /* If using React, set height on the root div as well */
   #root {
     height: -webkit-fill-available;
+    background: linear-gradient(to bottom right, #1dc0cc, #8e15f8, #e20000);
   }
 }
 
