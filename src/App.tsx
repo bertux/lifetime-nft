@@ -668,6 +668,7 @@ export default function Home(props: {
         </div>
       </div>
       <div className="mx-auto max-w-5xl rounded-lg p-4 shadow-md">
+        <br />
         <h2 className=" text-2xl font-bold xs:text-3xl lg:text-4xl">
           Unlock the Future with Arthera Genesis User Power Lifetime
           Subscription
@@ -795,6 +796,7 @@ export default function Home(props: {
             Chain.
           </i>
         </p>
+        <br />
       </div>
       <PoweredBy />
       <FooterButtonsDarkExample />
