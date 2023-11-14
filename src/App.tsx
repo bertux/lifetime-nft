@@ -45,6 +45,8 @@ import {
   Avalanche,
 } from "@thirdweb-dev/chains";
 import { AppChainId } from "./main";
+import { XMarkIcon } from "@heroicons/react/20/solid";
+import FooterButtonsDarkExample from "./components/ui/footer";
 
 const urlParams = new URL(window.location.toString()).searchParams;
 const primaryColor =
@@ -94,6 +96,7 @@ export default function Home(props: {
       ? "dark"
       : "light";
   }
+  const [removeBanner, setRemoveBanner] = useState(false);
 
   useEffect(() => {
     console.log("current contractAddress:", contractAddress);
@@ -143,6 +146,10 @@ export default function Home(props: {
       }
     }
   }, [chain]);
+
+  const collapse = async () => {
+    setRemoveBanner(true);
+  };
 
   const root = window.document.documentElement;
   root.classList.add(theme);
@@ -391,7 +398,63 @@ export default function Home(props: {
 
   return (
     <div className="min-h-screen w-screen">
-      <ConnectWallet className="!absolute !right-4 !top-4" theme={theme} />
+      {removeBanner === false && (
+        <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-red-600 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+          <div
+            className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+            aria-hidden="true"
+          >
+            <div
+              className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+              style={{
+                clipPath:
+                  "polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)",
+              }}
+            />
+          </div>
+          <div
+            className="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+            aria-hidden="true"
+          >
+            <div
+              className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+              style={{
+                clipPath:
+                  "polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)",
+              }}
+            />
+          </div>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p className="text-sm leading-6 text-gray-900">
+              {/* <strong className="font-semibold">GeneriCon 2023</strong> */}
+              {/* <svg viewBox="0 0 2 2" className="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
+            <circle cx={1} cy={1} r={1} />
+          </svg> */}
+              <strong className="font-semibold">
+                Spread the word and get 15%!
+              </strong>
+            </p>
+            <a
+              target="blank"
+              href="https://app.chainvine.xyz/arthera/O2HpAta7Da"
+              className="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+            >
+              Get my referral link <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+          <div className="flex flex-1 justify-end">
+            <button
+              type="button"
+              className="-m-3 p-3 focus-visible:outline-offset-[-4px]"
+              onClick={collapse}
+            >
+              <span className="sr-only">Dismiss</span>
+              <XMarkIcon className="h-5 w-5 text-gray-900" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      )}
+      <ConnectWallet className="!absolute !right-4 !top-16" theme={theme} />
       <div className="grid h-screen grid-cols-1 lg:grid-cols-12">
         <div className="hidden h-full w-full items-center justify-center lg:col-span-5 lg:flex lg:px-12">
           <HeadingImage
@@ -447,7 +510,7 @@ export default function Home(props: {
               </h1>
               {contractMetadata.data?.description ||
               contractMetadata.isLoading ? (
-                <div className="line-clamp-4 text-white-500">
+                <div className="text-white-500 line-clamp-4">
                   {contractMetadata.isLoading ? (
                     <div
                       role="status"
@@ -606,136 +669,139 @@ export default function Home(props: {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-5xl rounded-lg p-4 shadow-md">
-        <h2 className=" text-2xl font-bold xs:text-3xl lg:text-4xl">
-          Unlock the Future with Arthera Genesis User Power Lifetime
-          Subscription
+      <div className="mx-auto max-w-5xl rounded-lg p-4 ">
+        <h2 className="text-white mt-20 text-3xl font-bold xs:text-3xl lg:text-4xl">
+          Unlock the Future with an Arthera Genesis Power User Lifetime
+          Subscription NFT
         </h2>
         <br />
-        <h4 className=" text-1xl xs:text-1xl lg:text-4xl">
-          Welcome to the Arthera Club: Where Blockchain Transforms
+        <h4 className="text-white xs:text-1xl text-base lg:text-2xl">
+          Arthera is a Layer 1 EVM-compatible blockchain, improved by DAG-based
+          technology. Testnet is live and{" "}
+          <strong>Mainnet launches on December 25th 2023</strong>.
         </h4>
         <br />
-        <p>
-          Embark on a journey through the boundless world of blockchain with the
-          <strong>Arthera Genesis Power User Lifetime Subscription</strong>.
-          This isn't just a subscription, it's your golden ticket to unlocking
-          the full potential of blockchain.
+        <p className="text-white">
+          With a dual model offering both pay-as-you-go and subscription
+          options, Arthera's Lifetime Subscriptions (LTS) provide unparalleled
+          access to our evolving ecosystem. On Arthera you subscribe and forget
+          gas fees - for life.
         </p>
         <br />
-        <p>
-          Welcome to Arthera Chain, where every interaction is enriched with
-          value and innovation.
-        </p>
+        <p className="text-white">Enjoy Web3 as you enjoy the web.</p>
         <br />
-        <p>
+        <p className="text-white">
           <strong>
-            Why Choose the Arthera Genesis Power User Lifetime Subscription?
+            Make Arthera your destination, and embrace a future of seamless,
+            secure and cost-effective blockchain exploration.
           </strong>
         </p>
         <br />
-        <p>
-          Dive into a vibrant community of blockchain enthusiasts, surrounded by
-          brilliance, passion, and innovation. Experience easy access to
-          Arthera's ecosystem, free from the burden of gas fees, and enjoy entry
-          to curated dApps that elevate your blockchain journey.
-        </p>
-        <br />
-        <p>
-          <strong>Premium Benefits Tailored for You</strong>:
-        </p>
-        <br />
-        <ul className="mb-4 list-disc pl-6">
-          <li>
-            <strong>No More Gas Fees</strong>: Say goodbye to gas fee worries on
-            Arthera. Engage with the Arthera blockchain freely - a lifetime of
-            up to 30 daily transactions on Arthera at no additional cost.
-          </li>
-          <li>
-            <strong>Curated dApps Access</strong>: Enjoy exclusive access to
-            premium dApps, offering cutting-edge opportunities.
-          </li>
-          <li>
-            <strong>Community Engagement</strong>: Connect, share, learn, and
-            grow within a welcoming community of explorers. Explore: Unleashing
-            unprecedented value over a lifetime.
-          </li>
-          <li>
-            <strong>Subscription Store Benefits</strong>: Access discounts on
-            various subscriptions, adding value to your blockchain journey.
-          </li>
-          <li>
-            <strong>Early Access to Lifetime Deals</strong>: Stay ahead with
-            whitelisted early access to exclusive opportunities.
-          </li>
-          <li>
-            <strong>Helpdesk Support</strong>: Enjoy constant support, ensuring
-            your journey is always smooth and exceptional.
-          </li>
-        </ul>
-
-        <p>
-          <i>Don't Miss This Unparalleled Opportunity!</i>
-        </p>
-        <br />
-        <p>
-          The <strong>Arthera Genesis Power User Lifetime Subscription</strong>{" "}
-          is more than an offer, it's your gateway to a transformative
-          blockchain experience.
-        </p>
-        <br />
-        <p>
-          Join the <strong>Arthera Club</strong> and awaken a new blockchain
-          reality.
-        </p>
-        <br />
-        <p>
-          <strong>Key Details:</strong>
-        </p>
-
-        <br />
-        <ul className="mb-4 list-disc pl-6">
-          <li>Limited edition Lifetime Subscription NFT</li>
-          <li>Special pre-launch price of $33 (usual price $99)</li>
-          <li>
-            Available on 7 blockchains Affiliate/Referral: Arbitrum One,
-            Avalanche C-Chain, Base BNB Chain, Ethereum, Optimism, Polygon
-          </li>
-          <br />
-          <li>
-            Affiliate/Referral Program:
-            <ul className="mb-4 list-disc pl-6">
-              <li>15% referral bonus</li>
-            </ul>
-          </li>
-          <li>
-            Currently, the subscription provides you a daily allowance that lets
-            you:
-          </li>
-
-          <ul className="mb-4 list-disc pl-6">
-            <li>Make 30 $AA transfers</li>
-            <li>Make 30 ERC20 token transfers</li>
-            <li>Make 30 ERC721 token transfers</li>
-            <li>Make 30 ERC1155 token transfers</li>
-          </ul>
-        </ul>
-
-        <p>
-          Make Arthera your destination, and embrace a future of seamless,
-          secure and cost-effective blockchain exploration.
-        </p>
-        <br />
-        <p>
+        <p className="text-white">
+          Say goodbye to gas fee worries on Arthera. Engage with the Arthera
+          blockchain freely - a lifetime of up to 30 daily transactions on
+          Arthera at no additional cost.{" "}
           <i>
-            Important: After Arthera Mainnet Genisis Public Launch, you will be
-            able to bridge your NFT minted on one of the blockchain listed
-            previously to get your Lifetime Licence NFT available on Arthera
-            Chain.
+            Open the Arthera door to DeFi, Gaming, NFT Marketplace, and
+            everything Web3 - with no gas fees
+          </i>
+          .
+        </p>
+        <br />
+        <p>
+          <strong>You have just three things to do</strong>:
+        </p>
+        <br />
+        <ul className="mb-4 list-disc pl-6">
+          <li className="text-white">Select your network and click on mint LTS NFT.</li>
+          <li className="text-white">
+            Spread the word with your{" "}
+            <a
+              target="_blank"
+              href="https://app.chainvine.xyz/arthera/O2HpAta7Da"
+            >
+              referral code
+            </a>
+            .
+          </li>
+          <li className="text-white">Earn cash from referrals.</li>
+        </ul>
+
+        <p className="text-white">
+          <i>
+            Note: Networks available are Arbitrum One, Avalanche C-Chain, Base
+            BNB Chain, Ethereum, Optimism, Polygon). You need funds and gas to
+            mint, but then you’ll be ready for no gas fees on Arthera!
           </i>
         </p>
+        <br />
+        <p className="text-white">
+          If you need any help at all, please ask{" "}
+          <a target="_blank" href="https://t.me/artherachain/9">
+            here
+          </a>
+          .
+        </p>
+
+        <section>
+          <div className="mx-0 max-w-screen-xl px-0 py-0 sm:py-16 lg:px-6">
+            <div className="mb-8 max-w-screen-md lg:mb-16">
+              <h2 className="mb-4 text-4xl font-extrabold text-gray-500 dark:text-white">
+                Key Details
+              </h2>
+            </div>
+            <div className="space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
+              <div>
+                <p className="text-2xl text-white dark:text-white">
+                  Enjoy gas fees freedom experience for life on Arthera chain
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl text-white dark:text-white">
+                  Limited edition Arthera Lifetime Subscription NFT
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl text-white dark:text-white">
+                  Special pre-launch price of $33 (usual price $99)
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl text-white dark:text-white mb-5">
+                  Affiliate/Referral Program: </p>
+                  <ul className="mb-4 list-disc pl-6">
+                    <li className="text-white">15% referral bonus per LTS NFT</li>
+                    <li className="text-white">30% for 11 referrals or more</li>
+                  </ul>
+              </div>
+
+              <div>
+                <p className="text-2xl text-white dark:text-white mb-5">
+                The subscription currently lets you: </p>
+                  <ul className="mb-4 list-disc pl-6">
+                    <li className="text-white">Make 30 $AA transfers, or</li>
+                    <li className="text-white">Make 30 ERC20 token transfers, or</li>
+                    <li className="text-white">Make 30 ERC721 token transfers, or</li>
+                    <li className="text-white">Make 30 ERC1155 token transfers</li>
+                  </ul>
+              </div>
+
+              <div>
+                <p className="text-2xl text-white dark:text-white">
+                Available on 7 blockchains: Arbitrum One, Avalanche C-Chain, Base BNB Chain, Ethereum, Optimism, Polygon
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <p className="text-white"><i>Important: After the Arthera Mainnet Genesis Public Launch, you will be able to bridge your NFT to Arthera to get your Lifetime License, allowing for 30 daily transactions on Arthera only.</i></p>
+
+        <br />
+        <br />
       </div>
       <PoweredBy />
+      <FooterButtonsDarkExample />
     </div>
   );
 }
