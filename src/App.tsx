@@ -96,6 +96,7 @@ export default function Home(props: {
       ? "dark"
       : "light";
   }
+  const [removeBanner, setRemoveBanner] = useState(false)
 
   useEffect(() => {
     console.log("current contractAddress:", contractAddress);
@@ -145,6 +146,10 @@ export default function Home(props: {
       }
     }
   }, [chain]);
+
+  const collapse = async () => {
+    setRemoveBanner(true)
+  }
 
   const root = window.document.documentElement;
   root.classList.add(theme);
@@ -393,7 +398,7 @@ export default function Home(props: {
 
   return (
     <div className="min-h-screen w-screen">
-      <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-red-600 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+      {removeBanner === false && <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-red-600 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
         <div
           className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
           aria-hidden="true"
@@ -440,14 +445,14 @@ export default function Home(props: {
           <button
             type="button"
             className="-m-3 p-3 focus-visible:outline-offset-[-4px]"
+            onClick={collapse}
           >
             <span className="sr-only">Dismiss</span>
             <XMarkIcon className="h-5 w-5 text-gray-900" aria-hidden="true" />
           </button>
         </div>
-      </div>
-
-      <ConnectWallet className="!absolute !right-4 !top-4" theme={theme} />
+      </div>}
+      <ConnectWallet className="!absolute !right-4 !top-16" theme={theme} />
       <div className="grid h-screen grid-cols-1 lg:grid-cols-12">
         <div className="hidden h-full w-full items-center justify-center lg:col-span-5 lg:flex lg:px-12">
           <HeadingImage
