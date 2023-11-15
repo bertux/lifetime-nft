@@ -754,52 +754,57 @@ export default function Home(props: {
             <div className="space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
               <div>
                 <p className="text-2xl text-white dark:text-white">
-                  Enjoy gas fees freedom experience for life on Arthera chain
+                  Enjoy Arthera Chain with no gas fee worries - a lifetime of
+                  Web3 freedom on Arthera
                 </p>
-              </div>
-              <div>
-                <p className="text-2xl text-white dark:text-white">
-                  Limited edition Arthera Lifetime Subscription NFT
-                </p>
-              </div>
-              <div>
-                <p className="text-2xl text-white dark:text-white">
-                  Special pre-launch price of $33 (usual price $99)
-                </p>
-              </div>
-              <div>
-                <p className="mb-5 text-2xl text-white dark:text-white">
-                  Affiliate/Referral Program:{" "}
+                <br />
+                <p className="text-1xl text-white dark:text-white">
+                  <strong>Affiliate/Referral Program:</strong>
                 </p>
                 <ul className="mb-4 list-disc pl-6">
                   <li className="text-white">15% referral bonus per LTS NFT</li>
                   <li className="text-white">30% for 11 referrals or more</li>
+                  <li className="text-white">Powered by ChainVine</li>
                 </ul>
               </div>
-
-              <div>
-                <p className="mb-5 text-2xl text-white dark:text-white">
-                  The subscription currently lets you:{" "}
-                </p>
-                <ul className="mb-4 list-disc pl-6">
-                  <li className="text-white">Make 30 $AA transfers, or</li>
-                  <li className="text-white">
-                    Make 30 ERC20 token transfers, or
-                  </li>
-                  <li className="text-white">
-                    Make 30 ERC721 token transfers, or
-                  </li>
-                  <li className="text-white">
-                    Make 30 ERC1155 token transfers
-                  </li>
-                </ul>
-              </div>
-
               <div>
                 <p className="text-2xl text-white dark:text-white">
-                  Available on 7 blockchains: Arbitrum One, Avalanche C-Chain,
-                  Base BNB Chain, Ethereum, Optimism, Polygon
+                  Arthera Lifetime Subscription NFT
                 </p>
+                <br />
+                <ul className="mb-4 list-disc pl-6">
+                  <li className="text-white">
+                    The subscription grants a daily amount of “gas credit”
+                    equivalent to 30 transfers. This gas credit can be used with
+                    any dApps that support Arthera subscriptions.
+                  </li>
+                  <li className="text-white">
+                    This could cover 6 daily swaps if each swap requires 5x the
+                    amount of gas units needed for a transfer.
+                  </li>
+                  <li className="text-white">
+                    Usually that gas 'credit' lets you make up to 30 $AA token
+                    transfers, or up to 30 ERC20/ERC721/ERC1155 token transfers.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-2xl text-white dark:text-white">
+                  Available now on 7 blockchains for 33 USD each (99 USD after
+                  Arthera Mainnet launch):
+                </p>
+                <br />
+
+                <ul className="mb-4 list-disc pl-6">
+                  <li className="text-white">Limited edition (# per chain)</li>
+                  <li className="text-white">Arbitrum One (222)</li>
+                  <li className="text-white">Avalanche C-Chain (111)</li>
+                  <li className="text-white">Base (111)</li>
+                  <li className="text-white">BNB Chain (333)</li>
+                  <li className="text-white">Ethereum (444)</li>
+                  <li className="text-white">Optimism (111)</li>
+                  <li className="text-white">Polygon (333)</li>
+                </ul>
               </div>
             </div>
           </div>
