@@ -31,7 +31,6 @@ import {
   primaryColorConst,
   themeConst,
   chainVineCampaignIdConst,
-  contractConst,
 } from "./consts/parameters";
 import { ContractWrapper } from "@thirdweb-dev/sdk/dist/declarations/src/evm/core/classes/contract-wrapper";
 import {
@@ -63,13 +62,13 @@ const colors = {
   yellow: "#FBBF24",
 } as const;
 
-const binanceContract = "0xdB1474Ba3A6451b9f79De4476456240Db323B9EF";
-const polygonContract = "0x85C8453B6DD2d2A0c6c7937E8E115b4863c3e945";
-const ethereumContract = "0xF860869f089e3cd7E21045dd2a5056F764021c20";
-const optimismContract = "0x83bD77da3D5a69a91d6DA68A02319E590db28977";
-const baseContract = "0xD374DD8EA2BC8Be8bf0011c98BC3Bf286E0A972e";
-const arbitrumContract = "0xbDA8785fb802856C0e3055C090ED6D358DCCC4C1";
-const avalancheContract = "0x051ba1B0f1357ad35cA524EA1390BEC2a4Ea41e0";
+const binanceContract = "0xb00e27BafE8Ec5FBbAf1a51dC2cc0004F6227706";
+const polygonContract = "0xdb852C14085C7f386CaE46d089CcaA7f87C6733b";
+const ethereumContract = "0x2CB22e972290D5384bE29Acab1B36a256eAc0109";
+const optimismContract = "0xEFf9F5EFc29b3B2faE70a288FAD8E73661D57af1";
+const baseContract = "0x3fa4A0a09510d5045a31327007016d5ae8eB24bf";
+const arbitrumContract = "0xF16d12bcE3cf43981d2a3C581513453dCf7Da59b";
+const avalancheContract = "0xda92a3578EB469671EeCA23b9d42E40DB5C9fE52";
 
 export default function Home(props: {
   setAppChainId: (chainId: AppChainId) => void;
