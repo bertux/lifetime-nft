@@ -795,7 +795,7 @@ export default function Home(props: {
                 <br />
 
                 <ul className="mb-4 list-disc pl-6">
-                  {/* <li className="text-white">Limited edition (# per chain, )</li> */}
+                  <li className="text-white">Limited edition (# per chain, stablecoin needed)</li>
                   <li className="text-white">Arbitrum One (222, buy with USDT)</li>
                   <li className="text-white">Avalanche C-Chain (111, buy with USDT.e)</li>
                   <li className="text-white">Base (111, buy with USDC)</li>
