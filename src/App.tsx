@@ -1,5 +1,4 @@
 import {
-  ConnectWallet,
   detectContractFeature,
   useActiveClaimConditionForWallet,
   useAddress,
@@ -452,7 +451,6 @@ export default function Home(props: {
           </div>
         </div>
       )}
-      <ConnectWallet className="!absolute !right-4 !top-16" theme={theme} />
       <div className="grid h-screen grid-cols-1 lg:grid-cols-12">
         <div className="hidden h-full w-full items-center justify-center lg:col-span-5 lg:flex lg:px-12">
           <HeadingImage
@@ -795,9 +793,15 @@ export default function Home(props: {
                 <br />
 
                 <ul className="mb-4 list-disc pl-6">
-                  <li className="text-white">Limited edition (# per chain, stablecoin needed)</li>
-                  <li className="text-white">Arbitrum One (222, buy with USDT)</li>
-                  <li className="text-white">Avalanche C-Chain (111, buy with USDT.e)</li>
+                  <li className="text-white">
+                    Limited edition (# per chain, stablecoin needed)
+                  </li>
+                  <li className="text-white">
+                    Arbitrum One (222, buy with USDT)
+                  </li>
+                  <li className="text-white">
+                    Avalanche C-Chain (111, buy with USDT.e)
+                  </li>
                   <li className="text-white">Base (111, buy with USDC)</li>
                   <li className="text-white">BNB Chain (333, buy with USDT)</li>
                   <li className="text-white">Ethereum (444, buy with USDT)</li>
