@@ -427,7 +427,7 @@ export default function Home(props: {
             <circle cx={1} cy={1} r={1} />
           </svg> */}
               <strong className="font-semibold">
-                Spread the word and get 15%!
+                Due to a recent security alert, the usage of this app is paused until further notice. Thanks for your understanding and spread the word!
               </strong>
             </p>
             <a
